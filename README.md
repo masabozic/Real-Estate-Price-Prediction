@@ -53,6 +53,6 @@ Analiza važnosti atributa pokazala je da **površina objekta (`Area_m2`) odnosi
 ## 📦 Deployment i Eksportovanje Model-a
 Projekat uključuje implementaciju faza za puštanje u rad (deployment):
 * Model je uspešno serijalizovan (zamrznut) u fajl `model_nekretnine.pkl` pomoću biblioteke `joblib`.
-* Sačuvan je i skaler `standard_scaler.pkl` za potrebe transformacije novih, realnih unosa.
+* Sačuvan je i skaler `scaler_nekretnine.pkl` za potrebe transformacije novih, realnih unosa.
 * Kreiran je interaktivni kalkulator u kodu koji omogućava trenutnu procenu cene nekretnine na osnovu proizvoljnih korisničkih inputa.
 
