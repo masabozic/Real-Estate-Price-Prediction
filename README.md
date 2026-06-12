@@ -41,11 +41,10 @@ U projektu su testirana 3 algoritma (sa podelom podataka 80% trening / 20% test)
 Nakon fine optimizacije hiperparametara kroz **GridSearchCV** i provere stabilnosti putem **10-Fold Cross-Validation-a**, **Gradient Boosting** se izdvojio kao najbolji model:
 
 | Metrika | Vrednost |
-| :--- | :--- |
-| **$R^2$ Score** | **0.9547** (Objašnjava 95.5% varijanse) |
-| **MAE (Mean Absolute Error)** | **11,336 EUR** |
-| **RMSE (Root Mean Squared Error)**| **16,682 EUR** |
-| **MAPE (Mean Absolute Percentage Error)** | **9.44%** |
+| R² | 0.9752 |
+| MAE | 8,295 EUR |
+| RMSE | 11,348 EUR |
+| MAPE | 7.22% |
 
 Analiza važnosti atributa pokazala je da **površina objekta (`Area_m2`) odnosi čak 56.94% važnosti** pri donošenju odluke modela.
 
@@ -53,7 +52,7 @@ Analiza važnosti atributa pokazala je da **površina objekta (`Area_m2`) odnosi
 
 ## 📦 Deployment i Eksportovanje Model-a
 Projekat uključuje implementaciju faza za puštanje u rad (deployment):
-* Model je uspešno serijalizovan (zamrznut) u fajl `najbolji_model_gradient_boosting.pkl` pomoću biblioteke `joblib`.
+* Model je uspešno serijalizovan (zamrznut) u fajl `model_nekretnine.pkl` pomoću biblioteke `joblib`.
 * Sačuvan je i skaler `standard_scaler.pkl` za potrebe transformacije novih, realnih unosa.
 * Kreiran je interaktivni kalkulator u kodu koji omogućava trenutnu procenu cene nekretnine na osnovu proizvoljnih korisničkih inputa.
 
